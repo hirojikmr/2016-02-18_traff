@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160217061251) do
+ActiveRecord::Schema.define(version: 20160218022706) do
+
+  create_table "speeds", force: :cascade do |t|
+    t.date     "date"
+    t.time     "time"
+    t.float    "down"
+    t.float    "up"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "traffics", force: :cascade do |t|
     t.string   "date"

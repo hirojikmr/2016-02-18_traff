@@ -5467,3 +5467,1100 @@ Cannot render console from 119.104.62.15! Allowed networks: 127.0.0.1, ::1, 127.
 
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 119.104.62.15 at 2016-02-17 23:01:57 +0000
 Cannot render console from 119.104.62.15! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/speeds/" for 119.104.64.250 at 2016-02-18 02:27:31 +0000
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.4) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.4) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/ubuntu/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/ubuntu/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/ubuntu/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/ubuntu/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.6ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.7ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateSpeeds (20160218022706)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "speeds" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date, "time" time, "down" float, "up" float, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160218022706"]]
+  [1m[36m (8.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/speeds/" for 119.104.64.250 at 2016-02-18 02:27:47 +0000
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SpeedsController#index as HTML
+  [1m[35mSpeed Load (0.1ms)[0m  SELECT "speeds".* FROM "speeds"
+  Rendered speeds/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 183ms (Views: 174.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.self-cf66c9ad7233436177a052d181f70339c8c11e1594ea43591541ca39d33a2a2d.css?body=1" for 119.104.64.250 at 2016-02-18 02:27:48 +0000
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-c12934da7904844338c2a4a9a317695c793c8aebbccec36a6c695691ac989b4e.css?body=1" for 119.104.64.250 at 2016-02-18 02:27:48 +0000
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/speeds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 119.104.64.250 at 2016-02-18 02:27:48 +0000
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/css3-progress-bar.self-794586258b60d21a08f63b5d28b4f1c5b227f1d7ab836602a7cddef778355b95.css?body=1" for 119.104.64.250 at 2016-02-18 02:27:48 +0000
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/traffics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 119.104.64.250 at 2016-02-18 02:27:48 +0000
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 119.104.64.250 at 2016-02-18 02:27:48 +0000
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 119.104.64.250 at 2016-02-18 02:27:48 +0000
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/traffics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 119.104.64.250 at 2016-02-18 02:27:48 +0000
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/speeds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 119.104.64.250 at 2016-02-18 02:27:48 +0000
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 119.104.64.250 at 2016-02-18 02:27:48 +0000
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 119.104.64.250 at 2016-02-18 02:27:48 +0000
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/speeds/new" for 119.104.64.250 at 2016-02-18 02:27:51 +0000
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpeedsController#new as HTML
+  Rendered speeds/_form.html.erb (34.2ms)
+  Rendered speeds/new.html.erb within layouts/application (40.7ms)
+Completed 200 OK in 75ms (Views: 61.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/speeds/new" for 119.104.64.250 at 2016-02-18 11:42:30 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SpeedsController#new as HTML
+  Rendered speeds/_form.html.erb (21.4ms)
+  Rendered speeds/new.html.erb within layouts/application (25.8ms)
+Completed 200 OK in 229ms (Views: 216.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/speeds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 119.104.64.250 at 2016-02-18 11:42:31 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/traffics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 119.104.64.250 at 2016-02-18 11:42:31 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-cf66c9ad7233436177a052d181f70339c8c11e1594ea43591541ca39d33a2a2d.css?body=1" for 119.104.64.250 at 2016-02-18 11:42:31 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-c12934da7904844338c2a4a9a317695c793c8aebbccec36a6c695691ac989b4e.css?body=1" for 119.104.64.250 at 2016-02-18 11:42:31 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/css3-progress-bar.self-794586258b60d21a08f63b5d28b4f1c5b227f1d7ab836602a7cddef778355b95.css?body=1" for 119.104.64.250 at 2016-02-18 11:42:31 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 119.104.64.250 at 2016-02-18 11:42:31 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 119.104.64.250 at 2016-02-18 11:42:31 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 119.104.64.250 at 2016-02-18 11:42:31 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/speeds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 119.104.64.250 at 2016-02-18 11:42:31 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/traffics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 119.104.64.250 at 2016-02-18 11:42:31 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 119.104.64.250 at 2016-02-18 11:42:31 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/speeds" for 119.104.64.250 at 2016-02-18 11:42:41 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpeedsController#index as HTML
+  [1m[35mSpeed Load (0.2ms)[0m  SELECT "speeds".* FROM "speeds"
+  Rendered speeds/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 39ms (Views: 37.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/speeds/new" for 119.104.64.250 at 2016-02-18 11:42:44 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpeedsController#new as HTML
+  Rendered speeds/_form.html.erb (14.2ms)
+  Rendered speeds/new.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 50ms (Views: 49.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/speeds/new" for 119.104.64.250 at 2016-02-18 11:45:44 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SpeedsController#new as HTML
+  Rendered speeds/_form.html.erb (9.4ms)
+  Rendered speeds/new.html.erb within layouts/application (11.7ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (:ja is not a valid locale):
+    12:   <% end %>
+    13: 
+    14:   <div class="field">
+    15:     <%= f.label :date %><br>
+    16:     <%= f.date_select :date %>
+    17:   </div>
+    18:   <div class="field">
+  app/views/speeds/_form.html.erb:15:in `block in _app_views_speeds__form_html_erb___883877483378197816_70030818635360'
+  app/views/speeds/_form.html.erb:1:in `_app_views_speeds__form_html_erb___883877483378197816_70030818635360'
+  app/views/speeds/new.html.erb:3:in `_app_views_speeds_new_html_erb__4316746890631816807_70030969860520'
+
+
+  Rendered /home/ubuntu/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.9ms)
+
+
+Started GET "/speeds/" for 119.104.64.250 at 2016-02-18 11:45:56 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpeedsController#index as HTML
+  [1m[35mSpeed Load (0.2ms)[0m  SELECT "speeds".* FROM "speeds"
+  Rendered speeds/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 138ms (Views: 137.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/speeds/new" for 119.104.64.250 at 2016-02-18 11:45:59 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpeedsController#new as HTML
+  Rendered speeds/_form.html.erb (2.4ms)
+  Rendered speeds/new.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (:ja is not a valid locale):
+    12:   <% end %>
+    13: 
+    14:   <div class="field">
+    15:     <%= f.label :date %><br>
+    16:     <%= f.date_select :date %>
+    17:   </div>
+    18:   <div class="field">
+  app/views/speeds/_form.html.erb:15:in `block in _app_views_speeds__form_html_erb___883877483378197816_70030965427460'
+  app/views/speeds/_form.html.erb:1:in `_app_views_speeds__form_html_erb___883877483378197816_70030965427460'
+  app/views/speeds/new.html.erb:3:in `_app_views_speeds_new_html_erb__4316746890631816807_70030837238100'
+
+
+  Rendered /home/ubuntu/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.0ms)
+
+
+Started GET "/speeds/new" for 119.104.64.250 at 2016-02-18 11:46:00 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpeedsController#new as HTML
+  Rendered speeds/_form.html.erb (1.9ms)
+  Rendered speeds/new.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (:ja is not a valid locale):
+    12:   <% end %>
+    13: 
+    14:   <div class="field">
+    15:     <%= f.label :date %><br>
+    16:     <%= f.date_select :date %>
+    17:   </div>
+    18:   <div class="field">
+  app/views/speeds/_form.html.erb:15:in `block in _app_views_speeds__form_html_erb___883877483378197816_70030818635360'
+  app/views/speeds/_form.html.erb:1:in `_app_views_speeds__form_html_erb___883877483378197816_70030818635360'
+  app/views/speeds/new.html.erb:3:in `_app_views_speeds_new_html_erb__4316746890631816807_70030969860520'
+
+
+  Rendered /home/ubuntu/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.7ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.7ms)
+
+
+Started GET "/speeds/new" for 119.104.64.250 at 2016-02-18 11:46:44 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SpeedsController#new as HTML
+  Rendered speeds/_form.html.erb (11.9ms)
+  Rendered speeds/new.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 170ms (Views: 158.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/traffics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 119.104.64.250 at 2016-02-18 11:46:45 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-cf66c9ad7233436177a052d181f70339c8c11e1594ea43591541ca39d33a2a2d.css?body=1" for 119.104.64.250 at 2016-02-18 11:46:45 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-c12934da7904844338c2a4a9a317695c793c8aebbccec36a6c695691ac989b4e.css?body=1" for 119.104.64.250 at 2016-02-18 11:46:45 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/css3-progress-bar.self-794586258b60d21a08f63b5d28b4f1c5b227f1d7ab836602a7cddef778355b95.css?body=1" for 119.104.64.250 at 2016-02-18 11:46:45 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/speeds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 119.104.64.250 at 2016-02-18 11:46:45 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 119.104.64.250 at 2016-02-18 11:46:45 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/speeds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 119.104.64.250 at 2016-02-18 11:46:45 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 119.104.64.250 at 2016-02-18 11:46:45 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/traffics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 119.104.64.250 at 2016-02-18 11:46:45 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 119.104.64.250 at 2016-02-18 11:46:45 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 119.104.64.250 at 2016-02-18 11:46:45 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/speeds" for 119.104.64.250 at 2016-02-18 11:49:53 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpeedsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MAOenxLQxlm5lxxmga2SeMPtrjPpxlF6wuGpAYwGQzqa0/hEgoMX6df/6n6//2x8qZp+w8xPSlKpAn8xFk4NCg==", "speed"=>{"date(1i)"=>"2016", "date(2i)"=>"2", "date(3i)"=>"18", "time(1i)"=>"2016", "time(2i)"=>"2", "time(3i)"=>"18", "time(4i)"=>"11", "time(5i)"=>"46", "down"=>"5.55", "up"=>"2.33"}, "commit"=>"Create Speed"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "speeds" ("down", "up", "date", "time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["down", 5.55], ["up", 2.33], ["date", "2016-02-18"], ["time", "2016-02-18 11:46:00.000000"], ["created_at", "2016-02-18 02:49:53.978688"], ["updated_at", "2016-02-18 02:49:53.978688"]]
+  [1m[35m (5.4ms)[0m  commit transaction
+Redirected to http://rails.momox.net:3000/speeds/1
+Completed 302 Found in 13ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/speeds/1" for 119.104.64.250 at 2016-02-18 11:49:54 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpeedsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSpeed Load (0.2ms)[0m  [1mSELECT  "speeds".* FROM "speeds" WHERE "speeds"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered speeds/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 52ms (Views: 40.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/speeds" for 119.104.64.250 at 2016-02-18 11:49:56 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpeedsController#index as HTML
+  [1m[35mSpeed Load (0.2ms)[0m  SELECT "speeds".* FROM "speeds"
+  Rendered speeds/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 39ms (Views: 37.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/speeds/1" for 119.104.64.250 at 2016-02-18 11:51:05 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpeedsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSpeed Load (0.1ms)[0m  [1mSELECT  "speeds".* FROM "speeds" WHERE "speeds"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered speeds/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/speeds/1/edit" for 119.104.64.250 at 2016-02-18 11:51:08 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpeedsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSpeed Load (0.1ms)[0m  SELECT  "speeds".* FROM "speeds" WHERE "speeds"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered speeds/_form.html.erb (3.7ms)
+  Rendered speeds/edit.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/speeds" for 119.104.64.250 at 2016-02-18 11:51:11 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpeedsController#index as HTML
+  [1m[36mSpeed Load (0.2ms)[0m  [1mSELECT "speeds".* FROM "speeds"[0m
+  Rendered speeds/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/speeds" for 119.104.64.250 at 2016-02-18 11:56:06 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SpeedsController#index as HTML
+  [1m[35mSpeed Load (0.1ms)[0m  SELECT "speeds".* FROM "speeds"
+  Rendered speeds/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 149ms (Views: 140.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/scaffolds.self-cf66c9ad7233436177a052d181f70339c8c11e1594ea43591541ca39d33a2a2d.css?body=1" for 119.104.64.250 at 2016-02-18 11:56:07 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/speeds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 119.104.64.250 at 2016-02-18 11:56:07 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/traffics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 119.104.64.250 at 2016-02-18 11:56:07 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-c12934da7904844338c2a4a9a317695c793c8aebbccec36a6c695691ac989b4e.css?body=1" for 119.104.64.250 at 2016-02-18 11:56:07 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/css3-progress-bar.self-794586258b60d21a08f63b5d28b4f1c5b227f1d7ab836602a7cddef778355b95.css?body=1" for 119.104.64.250 at 2016-02-18 11:56:07 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 119.104.64.250 at 2016-02-18 11:56:07 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 119.104.64.250 at 2016-02-18 11:56:07 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/traffics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 119.104.64.250 at 2016-02-18 11:56:07 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 119.104.64.250 at 2016-02-18 11:56:07 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/speeds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 119.104.64.250 at 2016-02-18 11:56:07 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 119.104.64.250 at 2016-02-18 11:56:07 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/speeds" for 119.104.64.250 at 2016-02-18 11:57:14 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SpeedsController#index as HTML
+  [1m[35mSpeed Load (0.1ms)[0m  SELECT "speeds".* FROM "speeds"
+  Rendered speeds/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 159ms (Views: 151.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/speeds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 119.104.64.250 at 2016-02-18 11:57:14 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-cf66c9ad7233436177a052d181f70339c8c11e1594ea43591541ca39d33a2a2d.css?body=1" for 119.104.64.250 at 2016-02-18 11:57:14 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/traffics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 119.104.64.250 at 2016-02-18 11:57:14 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 119.104.64.250 at 2016-02-18 11:57:15 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/css3-progress-bar.self-794586258b60d21a08f63b5d28b4f1c5b227f1d7ab836602a7cddef778355b95.css?body=1" for 119.104.64.250 at 2016-02-18 11:57:15 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 119.104.64.250 at 2016-02-18 11:57:15 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-c12934da7904844338c2a4a9a317695c793c8aebbccec36a6c695691ac989b4e.css?body=1" for 119.104.64.250 at 2016-02-18 11:57:15 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 119.104.64.250 at 2016-02-18 11:57:15 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/speeds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 119.104.64.250 at 2016-02-18 11:57:15 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/traffics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 119.104.64.250 at 2016-02-18 11:57:15 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 119.104.64.250 at 2016-02-18 11:57:15 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/speeds" for 119.104.64.250 at 2016-02-18 12:09:44 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SpeedsController#index as HTML
+  [1m[35mSpeed Load (0.1ms)[0m  SELECT "speeds".* FROM "speeds"
+  Rendered speeds/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 141ms (Views: 133.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/scaffolds.self-cf66c9ad7233436177a052d181f70339c8c11e1594ea43591541ca39d33a2a2d.css?body=1" for 119.104.64.250 at 2016-02-18 12:09:45 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/speeds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 119.104.64.250 at 2016-02-18 12:09:45 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/css3-progress-bar.self-794586258b60d21a08f63b5d28b4f1c5b227f1d7ab836602a7cddef778355b95.css?body=1" for 119.104.64.250 at 2016-02-18 12:09:45 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-c12934da7904844338c2a4a9a317695c793c8aebbccec36a6c695691ac989b4e.css?body=1" for 119.104.64.250 at 2016-02-18 12:09:45 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 119.104.64.250 at 2016-02-18 12:09:45 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/traffics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 119.104.64.250 at 2016-02-18 12:09:45 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 119.104.64.250 at 2016-02-18 12:09:45 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 119.104.64.250 at 2016-02-18 12:09:45 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/traffics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 119.104.64.250 at 2016-02-18 12:09:45 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/speeds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 119.104.64.250 at 2016-02-18 12:09:45 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 119.104.64.250 at 2016-02-18 12:09:45 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/speeds" for 119.104.64.250 at 2016-02-18 12:14:09 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SpeedsController#index as HTML
+  [1m[35mSpeed Load (0.1ms)[0m  SELECT "speeds".* FROM "speeds"
+  Rendered speeds/index.html.erb within layouts/application (21.3ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined local variable or method `traffic' for #<#<Class:0x007f27441417d0>:0x007f2744140a60>):
+    34: 
+    35: 
+    36:      <tr>
+    37:         <td class='date'><%= traffic.date %></td>
+    38:         <td class='num'><%= number_with_precision traffic.r, precision:2 %>GB</td>
+    39:         <td class='graph'> <meter value="<%=(traffic.r/20)%>" style="width:100px"></meter> </td>
+    40:         <td class='num'><%= number_with_precision traffic.s, precision:2 %>GB</td>
+  app/views/speeds/index.html.erb:37:in `_app_views_speeds_index_html_erb___1278108492135266795_69903311596120'
+
+
+  Rendered /home/ubuntu/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.6ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.3ms)
+
+
+Started GET "/speeds" for 119.104.64.250 at 2016-02-18 12:15:21 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpeedsController#index as HTML
+  [1m[36mSpeed Load (0.2ms)[0m  [1mSELECT "speeds".* FROM "speeds"[0m
+  Rendered speeds/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 165ms (Views: 164.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.self-cf66c9ad7233436177a052d181f70339c8c11e1594ea43591541ca39d33a2a2d.css?body=1" for 119.104.64.250 at 2016-02-18 12:15:22 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/speeds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 119.104.64.250 at 2016-02-18 12:15:22 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/traffics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 119.104.64.250 at 2016-02-18 12:15:22 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 119.104.64.250 at 2016-02-18 12:15:22 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-0c6c217473ed6f688f189b48b0247f5d7d3874d3fdad403fda61f6595943d745.css?body=1" for 119.104.64.250 at 2016-02-18 12:15:22 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/css3-progress-bar.self-794586258b60d21a08f63b5d28b4f1c5b227f1d7ab836602a7cddef778355b95.css?body=1" for 119.104.64.250 at 2016-02-18 12:15:22 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 119.104.64.250 at 2016-02-18 12:15:22 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 119.104.64.250 at 2016-02-18 12:15:22 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/traffics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 119.104.64.250 at 2016-02-18 12:15:22 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/speeds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 119.104.64.250 at 2016-02-18 12:15:22 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 119.104.64.250 at 2016-02-18 12:15:22 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/traffics" for 119.104.64.250 at 2016-02-18 12:15:39 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TrafficsController#index as HTML
+  [1m[35mTraffic Load (1.0ms)[0m  SELECT "traffics".* FROM "traffics"
+  Rendered traffics/index.html.erb within layouts/application (59.5ms)
+Completed 200 OK in 81ms (Views: 77.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/traffics" for 119.104.64.250 at 2016-02-18 12:16:56 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TrafficsController#index as HTML
+  [1m[36mTraffic Load (0.3ms)[0m  [1mSELECT "traffics".* FROM "traffics"[0m
+  Rendered traffics/index.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 37ms (Views: 35.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/speeds" for 119.104.64.250 at 2016-02-18 12:17:05 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpeedsController#index as HTML
+  [1m[35mSpeed Load (0.2ms)[0m  SELECT "speeds".* FROM "speeds"
+  Rendered speeds/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/speeds" for 119.104.64.250 at 2016-02-18 12:17:36 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpeedsController#index as HTML
+  [1m[36mSpeed Load (0.2ms)[0m  [1mSELECT "speeds".* FROM "speeds"[0m
+  Rendered speeds/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/speeds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 119.104.64.250 at 2016-02-18 12:17:36 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-cf66c9ad7233436177a052d181f70339c8c11e1594ea43591541ca39d33a2a2d.css?body=1" for 119.104.64.250 at 2016-02-18 12:17:36 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/traffics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 119.104.64.250 at 2016-02-18 12:17:36 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-0c6c217473ed6f688f189b48b0247f5d7d3874d3fdad403fda61f6595943d745.css?body=1" for 119.104.64.250 at 2016-02-18 12:17:36 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/css3-progress-bar.self-794586258b60d21a08f63b5d28b4f1c5b227f1d7ab836602a7cddef778355b95.css?body=1" for 119.104.64.250 at 2016-02-18 12:17:36 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 119.104.64.250 at 2016-02-18 12:17:36 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 119.104.64.250 at 2016-02-18 12:17:36 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 119.104.64.250 at 2016-02-18 12:17:37 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/speeds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 119.104.64.250 at 2016-02-18 12:17:37 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/traffics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 119.104.64.250 at 2016-02-18 12:17:37 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 119.104.64.250 at 2016-02-18 12:17:37 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/speeds" for 119.104.64.250 at 2016-02-18 12:18:36 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpeedsController#index as HTML
+  [1m[35mSpeed Load (0.2ms)[0m  SELECT "speeds".* FROM "speeds"
+  Rendered speeds/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/speeds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 119.104.64.250 at 2016-02-18 12:18:37 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-cf66c9ad7233436177a052d181f70339c8c11e1594ea43591541ca39d33a2a2d.css?body=1" for 119.104.64.250 at 2016-02-18 12:18:37 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/css3-progress-bar.self-794586258b60d21a08f63b5d28b4f1c5b227f1d7ab836602a7cddef778355b95.css?body=1" for 119.104.64.250 at 2016-02-18 12:18:37 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/traffics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 119.104.64.250 at 2016-02-18 12:18:37 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-0c6c217473ed6f688f189b48b0247f5d7d3874d3fdad403fda61f6595943d745.css?body=1" for 119.104.64.250 at 2016-02-18 12:18:37 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 119.104.64.250 at 2016-02-18 12:18:37 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 119.104.64.250 at 2016-02-18 12:18:37 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 119.104.64.250 at 2016-02-18 12:18:37 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 119.104.64.250 at 2016-02-18 12:18:37 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/traffics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 119.104.64.250 at 2016-02-18 12:18:37 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/speeds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 119.104.64.250 at 2016-02-18 12:18:37 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/speeds" for 119.104.64.250 at 2016-02-18 12:18:59 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpeedsController#index as HTML
+  [1m[36mSpeed Load (0.2ms)[0m  [1mSELECT "speeds".* FROM "speeds"[0m
+  Rendered speeds/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.self-cf66c9ad7233436177a052d181f70339c8c11e1594ea43591541ca39d33a2a2d.css?body=1" for 119.104.64.250 at 2016-02-18 12:19:00 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-0c6c217473ed6f688f189b48b0247f5d7d3874d3fdad403fda61f6595943d745.css?body=1" for 119.104.64.250 at 2016-02-18 12:19:00 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/css3-progress-bar.self-794586258b60d21a08f63b5d28b4f1c5b227f1d7ab836602a7cddef778355b95.css?body=1" for 119.104.64.250 at 2016-02-18 12:19:00 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/speeds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 119.104.64.250 at 2016-02-18 12:19:00 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/traffics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 119.104.64.250 at 2016-02-18 12:19:00 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 119.104.64.250 at 2016-02-18 12:19:00 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 119.104.64.250 at 2016-02-18 12:19:00 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/speeds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 119.104.64.250 at 2016-02-18 12:19:00 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 119.104.64.250 at 2016-02-18 12:19:00 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 119.104.64.250 at 2016-02-18 12:19:00 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/traffics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 119.104.64.250 at 2016-02-18 12:19:00 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/speeds" for 119.104.64.250 at 2016-02-18 12:21:43 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpeedsController#index as HTML
+  [1m[35mSpeed Load (0.2ms)[0m  SELECT "speeds".* FROM "speeds"
+  Rendered speeds/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 13ms (Views: 12.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.self-cf66c9ad7233436177a052d181f70339c8c11e1594ea43591541ca39d33a2a2d.css?body=1" for 119.104.64.250 at 2016-02-18 12:21:43 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/traffics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 119.104.64.250 at 2016-02-18 12:21:43 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/speeds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 119.104.64.250 at 2016-02-18 12:21:43 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/css3-progress-bar.self-794586258b60d21a08f63b5d28b4f1c5b227f1d7ab836602a7cddef778355b95.css?body=1" for 119.104.64.250 at 2016-02-18 12:21:43 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-0c6c217473ed6f688f189b48b0247f5d7d3874d3fdad403fda61f6595943d745.css?body=1" for 119.104.64.250 at 2016-02-18 12:21:43 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 119.104.64.250 at 2016-02-18 12:21:43 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 119.104.64.250 at 2016-02-18 12:21:44 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/speeds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 119.104.64.250 at 2016-02-18 12:21:44 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 119.104.64.250 at 2016-02-18 12:21:44 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 119.104.64.250 at 2016-02-18 12:21:44 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/traffics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 119.104.64.250 at 2016-02-18 12:21:44 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/speeds/1" for 119.104.64.250 at 2016-02-18 12:21:57 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpeedsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSpeed Load (0.2ms)[0m  [1mSELECT  "speeds".* FROM "speeds" WHERE "speeds"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered speeds/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 20ms (Views: 14.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/speeds" for 119.104.64.250 at 2016-02-18 12:22:00 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpeedsController#index as HTML
+  [1m[35mSpeed Load (0.2ms)[0m  SELECT "speeds".* FROM "speeds"
+  Rendered speeds/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/speeds/1/edit" for 119.104.64.250 at 2016-02-18 12:22:02 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpeedsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSpeed Load (0.1ms)[0m  [1mSELECT  "speeds".* FROM "speeds" WHERE "speeds"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered speeds/_form.html.erb (9.8ms)
+  Rendered speeds/edit.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/speeds" for 119.104.64.250 at 2016-02-18 12:22:04 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpeedsController#index as HTML
+  [1m[35mSpeed Load (0.2ms)[0m  SELECT "speeds".* FROM "speeds"
+  Rendered speeds/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 13ms (Views: 12.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/speeds" for 119.104.64.250 at 2016-02-18 12:22:51 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpeedsController#index as HTML
+  [1m[36mSpeed Load (0.2ms)[0m  [1mSELECT "speeds".* FROM "speeds"[0m
+  Rendered speeds/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 25ms (Views: 24.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.self-cf66c9ad7233436177a052d181f70339c8c11e1594ea43591541ca39d33a2a2d.css?body=1" for 119.104.64.250 at 2016-02-18 12:22:51 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/speeds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 119.104.64.250 at 2016-02-18 12:22:51 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-0c6c217473ed6f688f189b48b0247f5d7d3874d3fdad403fda61f6595943d745.css?body=1" for 119.104.64.250 at 2016-02-18 12:22:51 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/traffics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 119.104.64.250 at 2016-02-18 12:22:51 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/css3-progress-bar.self-794586258b60d21a08f63b5d28b4f1c5b227f1d7ab836602a7cddef778355b95.css?body=1" for 119.104.64.250 at 2016-02-18 12:22:51 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 119.104.64.250 at 2016-02-18 12:22:51 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 119.104.64.250 at 2016-02-18 12:22:52 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 119.104.64.250 at 2016-02-18 12:22:52 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/speeds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 119.104.64.250 at 2016-02-18 12:22:52 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/traffics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 119.104.64.250 at 2016-02-18 12:22:52 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 119.104.64.250 at 2016-02-18 12:22:52 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/speeds" for 119.104.64.250 at 2016-02-18 12:23:07 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpeedsController#index as HTML
+  [1m[35mSpeed Load (0.2ms)[0m  SELECT "speeds".* FROM "speeds"
+  Rendered speeds/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/traffics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 119.104.64.250 at 2016-02-18 12:23:07 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/css3-progress-bar.self-794586258b60d21a08f63b5d28b4f1c5b227f1d7ab836602a7cddef778355b95.css?body=1" for 119.104.64.250 at 2016-02-18 12:23:07 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-0c6c217473ed6f688f189b48b0247f5d7d3874d3fdad403fda61f6595943d745.css?body=1" for 119.104.64.250 at 2016-02-18 12:23:07 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/speeds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 119.104.64.250 at 2016-02-18 12:23:07 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-cf66c9ad7233436177a052d181f70339c8c11e1594ea43591541ca39d33a2a2d.css?body=1" for 119.104.64.250 at 2016-02-18 12:23:07 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 119.104.64.250 at 2016-02-18 12:23:07 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/traffics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 119.104.64.250 at 2016-02-18 12:23:08 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/speeds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 119.104.64.250 at 2016-02-18 12:23:08 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 119.104.64.250 at 2016-02-18 12:23:08 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 119.104.64.250 at 2016-02-18 12:23:08 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 119.104.64.250 at 2016-02-18 12:23:08 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/speeds" for 119.104.64.250 at 2016-02-18 12:23:28 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpeedsController#index as HTML
+  [1m[36mSpeed Load (0.2ms)[0m  [1mSELECT "speeds".* FROM "speeds"[0m
+  Rendered speeds/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/traffics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 119.104.64.250 at 2016-02-18 12:23:29 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/css3-progress-bar.self-794586258b60d21a08f63b5d28b4f1c5b227f1d7ab836602a7cddef778355b95.css?body=1" for 119.104.64.250 at 2016-02-18 12:23:29 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/speeds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 119.104.64.250 at 2016-02-18 12:23:29 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-0c6c217473ed6f688f189b48b0247f5d7d3874d3fdad403fda61f6595943d745.css?body=1" for 119.104.64.250 at 2016-02-18 12:23:29 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-cf66c9ad7233436177a052d181f70339c8c11e1594ea43591541ca39d33a2a2d.css?body=1" for 119.104.64.250 at 2016-02-18 12:23:29 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 119.104.64.250 at 2016-02-18 12:23:29 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 119.104.64.250 at 2016-02-18 12:23:29 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 119.104.64.250 at 2016-02-18 12:23:29 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/speeds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 119.104.64.250 at 2016-02-18 12:23:29 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 119.104.64.250 at 2016-02-18 12:23:29 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/traffics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 119.104.64.250 at 2016-02-18 12:23:29 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/traffics" for 119.104.64.250 at 2016-02-18 12:23:36 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TrafficsController#index as HTML
+  [1m[35mTraffic Load (0.3ms)[0m  SELECT "traffics".* FROM "traffics"
+  Rendered traffics/index.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 34ms (Views: 33.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/scaffolds.self-cf66c9ad7233436177a052d181f70339c8c11e1594ea43591541ca39d33a2a2d.css?body=1" for 119.104.64.250 at 2016-02-18 12:23:36 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-0c6c217473ed6f688f189b48b0247f5d7d3874d3fdad403fda61f6595943d745.css?body=1" for 119.104.64.250 at 2016-02-18 12:23:36 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/speeds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 119.104.64.250 at 2016-02-18 12:23:36 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/traffics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 119.104.64.250 at 2016-02-18 12:23:36 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/css3-progress-bar.self-794586258b60d21a08f63b5d28b4f1c5b227f1d7ab836602a7cddef778355b95.css?body=1" for 119.104.64.250 at 2016-02-18 12:23:36 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 119.104.64.250 at 2016-02-18 12:23:36 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/traffics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 119.104.64.250 at 2016-02-18 12:23:36 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 119.104.64.250 at 2016-02-18 12:23:36 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/speeds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 119.104.64.250 at 2016-02-18 12:23:36 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 119.104.64.250 at 2016-02-18 12:23:36 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 119.104.64.250 at 2016-02-18 12:23:36 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
