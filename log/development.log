@@ -6564,3 +6564,526 @@ Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127
 
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 119.104.64.250 at 2016-02-18 12:23:36 +0900
 Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/speeds/new" for 119.104.64.250 at 2016-02-18 12:25:55 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpeedsController#new as HTML
+  Rendered speeds/_form.html.erb (4.7ms)
+  Rendered speeds/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/speeds" for 119.104.64.250 at 2016-02-18 12:26:09 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpeedsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zakDa+Q23k+pe0qBwT1nEkfS2qyUW4IaZDaAjTu/vNhneWWwdGUP/8cTvJn/b5kWLaUKXLHSmTIP1Va9offy6A==", "speed"=>{"date(1i)"=>"2016", "date(2i)"=>"2", "date(3i)"=>"18", "time(1i)"=>"2016", "time(2i)"=>"2", "time(3i)"=>"18", "time(4i)"=>"12", "time(5i)"=>"25", "down"=>"5.27", "up"=>"7.85"}, "commit"=>"Create Speed"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "speeds" ("down", "up", "date", "time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["down", 5.27], ["up", 7.85], ["date", "2016-02-18"], ["time", "2016-02-18 12:25:00.000000"], ["created_at", "2016-02-18 03:26:09.308258"], ["updated_at", "2016-02-18 03:26:09.308258"]]
+  [1m[36m (6.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://rails.momox.net:3000/speeds/2
+Completed 302 Found in 11ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/speeds/2" for 119.104.64.250 at 2016-02-18 12:26:09 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpeedsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mSpeed Load (0.1ms)[0m  SELECT  "speeds".* FROM "speeds" WHERE "speeds"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered speeds/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/speeds" for 119.104.64.250 at 2016-02-18 12:26:12 +0900
+Cannot render console from 119.104.64.250! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpeedsController#index as HTML
+  [1m[36mSpeed Load (0.2ms)[0m  [1mSELECT "speeds".* FROM "speeds"[0m
+  Rendered speeds/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 18ms (Views: 17.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/traffics" for 119.104.63.236 at 2016-02-18 16:46:12 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TrafficsController#index as HTML
+  [1m[35mTraffic Load (0.2ms)[0m  SELECT "traffics".* FROM "traffics"
+  Rendered traffics/index.html.erb within layouts/application (33.5ms)
+Completed 200 OK in 226ms (Views: 216.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/traffics/new" for 119.104.63.236 at 2016-02-18 16:46:19 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TrafficsController#new as HTML
+  Rendered traffics/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 16ms (Views: 15.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/traffics" for 119.104.63.236 at 2016-02-18 16:46:26 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TrafficsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MI2wMSE8soAX3pzOKiU3dK1IvAV04a8Qxgu4lKPwxXeaXdbqsW9jMHm2atYUd8lwxz9s9VFotDit6G6kObiLRw==", "data"=>"02/18/16,3.50,0.30847", "commit"=>"SEND"}
+  [1m[36mTraffic Load (0.2ms)[0m  [1mSELECT  "traffics".* FROM "traffics" WHERE "traffics"."date" = ? LIMIT 1[0m  [["date", "02/18/16"]]
+  [1m[35mSQL (4.2ms)[0m  DELETE FROM "traffics" WHERE "traffics"."id" = ?  [["id", 227]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "traffics" ("date", "r", "s", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["date", "02/18/16"], ["r", 3.5], ["s", 0.30847], ["created_at", "2016-02-18 07:46:26.415416"], ["updated_at", "2016-02-18 07:46:26.415416"]]
+  [1m[36m (4.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mTraffic Load (0.2ms)[0m  SELECT "traffics".* FROM "traffics"
+  Rendered traffics/index.html.erb within layouts/application (31.5ms)
+Completed 200 OK in 86ms (Views: 59.8ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/speeds" for 119.104.63.236 at 2016-02-18 16:46:41 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpeedsController#index as HTML
+  [1m[36mSpeed Load (0.1ms)[0m  [1mSELECT "speeds".* FROM "speeds"[0m
+  Rendered speeds/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 38ms (Views: 36.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/speeds/new" for 119.104.63.236 at 2016-02-18 16:47:39 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpeedsController#new as HTML
+  Rendered speeds/_form.html.erb (16.4ms)
+  Rendered speeds/new.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 35ms (Views: 34.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/speeds" for 119.104.63.236 at 2016-02-18 16:48:00 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpeedsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"D4O/RfNcJz7fecplnJlcwVq3ex+YYwxOrqonkT/QfAKlU9meYw/2jrERPH2iy6LFMMCr773qF2bFSfGhpZgyMg==", "speed"=>{"date(1i)"=>"2016", "date(2i)"=>"2", "date(3i)"=>"18", "time(1i)"=>"2016", "time(2i)"=>"2", "time(3i)"=>"18", "time(4i)"=>"16", "time(5i)"=>"47", "down"=>"10.19", "up"=>"3.79"}, "commit"=>"Create Speed"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "speeds" ("down", "up", "date", "time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["down", 10.19], ["up", 3.79], ["date", "2016-02-18"], ["time", "2016-02-18 16:47:00.000000"], ["created_at", "2016-02-18 07:48:00.065569"], ["updated_at", "2016-02-18 07:48:00.065569"]]
+  [1m[35m (6.3ms)[0m  commit transaction
+Redirected to http://rails.momox.net:3000/speeds/3
+Completed 302 Found in 10ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/speeds/3" for 119.104.63.236 at 2016-02-18 16:48:00 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpeedsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSpeed Load (0.2ms)[0m  [1mSELECT  "speeds".* FROM "speeds" WHERE "speeds"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered speeds/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/speeds" for 119.104.63.236 at 2016-02-18 16:48:03 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpeedsController#index as HTML
+  [1m[35mSpeed Load (0.1ms)[0m  SELECT "speeds".* FROM "speeds"
+  Rendered speeds/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/speeds/new" for 119.104.63.236 at 2016-02-18 16:52:50 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SpeedsController#new as HTML
+  Rendered speeds/_form.html.erb (15.0ms)
+  Rendered speeds/new.html.erb within layouts/application (17.5ms)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (wrong number of arguments (1 for 2..4)):
+    21:   </div>
+    22: 
+    23:   <div class="field">
+    24:     <%= label "down up speed:" %><br>
+    25:     <%= f.time_select :time %>
+    26:   </div>
+    27: 
+  app/views/speeds/_form.html.erb:24:in `block in _app_views_speeds__form_html_erb__3190801762894088619_70118664178380'
+  app/views/speeds/_form.html.erb:1:in `_app_views_speeds__form_html_erb__3190801762894088619_70118664178380'
+  app/views/speeds/new.html.erb:3:in `_app_views_speeds_new_html_erb___1393720458766133681_70118825106620'
+
+
+  Rendered /home/ubuntu/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.4ms)
+
+
+Started GET "/speeds/new" for 119.104.63.236 at 2016-02-18 16:52:52 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpeedsController#new as HTML
+  Rendered speeds/_form.html.erb (7.0ms)
+  Rendered speeds/new.html.erb within layouts/application (7.8ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (wrong number of arguments (1 for 2..4)):
+    21:   </div>
+    22: 
+    23:   <div class="field">
+    24:     <%= label "down up speed:" %><br>
+    25:     <%= f.time_select :time %>
+    26:   </div>
+    27: 
+  app/views/speeds/_form.html.erb:24:in `block in _app_views_speeds__form_html_erb__3190801762894088619_70118823486320'
+  app/views/speeds/_form.html.erb:1:in `_app_views_speeds__form_html_erb__3190801762894088619_70118823486320'
+  app/views/speeds/new.html.erb:3:in `_app_views_speeds_new_html_erb___1393720458766133681_70118823517400'
+
+
+  Rendered /home/ubuntu/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (18.8ms)
+
+
+Started GET "/speeds/new" for 119.104.63.236 at 2016-02-18 16:53:29 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpeedsController#new as HTML
+  Rendered speeds/_form.html.erb (7.5ms)
+  Rendered speeds/new.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 185ms (Views: 184.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.self-cf66c9ad7233436177a052d181f70339c8c11e1594ea43591541ca39d33a2a2d.css?body=1" for 119.104.63.236 at 2016-02-18 16:53:29 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/traffics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 119.104.63.236 at 2016-02-18 16:53:29 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/speeds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 119.104.63.236 at 2016-02-18 16:53:29 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-0c6c217473ed6f688f189b48b0247f5d7d3874d3fdad403fda61f6595943d745.css?body=1" for 119.104.63.236 at 2016-02-18 16:53:29 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/css3-progress-bar.self-794586258b60d21a08f63b5d28b4f1c5b227f1d7ab836602a7cddef778355b95.css?body=1" for 119.104.63.236 at 2016-02-18 16:53:29 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 119.104.63.236 at 2016-02-18 16:53:29 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 119.104.63.236 at 2016-02-18 16:53:29 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 119.104.63.236 at 2016-02-18 16:53:30 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/speeds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 119.104.63.236 at 2016-02-18 16:53:30 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/traffics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 119.104.63.236 at 2016-02-18 16:53:30 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 119.104.63.236 at 2016-02-18 16:53:30 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/speeds/new" for 119.104.63.236 at 2016-02-18 16:56:38 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpeedsController#new as HTML
+  Rendered speeds/_form.html.erb (6.2ms)
+  Rendered speeds/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 40ms (Views: 39.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.self-cf66c9ad7233436177a052d181f70339c8c11e1594ea43591541ca39d33a2a2d.css?body=1" for 119.104.63.236 at 2016-02-18 16:56:38 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/speeds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 119.104.63.236 at 2016-02-18 16:56:38 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/traffics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 119.104.63.236 at 2016-02-18 16:56:38 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-0c6c217473ed6f688f189b48b0247f5d7d3874d3fdad403fda61f6595943d745.css?body=1" for 119.104.63.236 at 2016-02-18 16:56:38 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/css3-progress-bar.self-794586258b60d21a08f63b5d28b4f1c5b227f1d7ab836602a7cddef778355b95.css?body=1" for 119.104.63.236 at 2016-02-18 16:56:38 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 119.104.63.236 at 2016-02-18 16:56:38 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 119.104.63.236 at 2016-02-18 16:56:38 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/speeds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 119.104.63.236 at 2016-02-18 16:56:39 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 119.104.63.236 at 2016-02-18 16:56:39 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/traffics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 119.104.63.236 at 2016-02-18 16:56:39 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 119.104.63.236 at 2016-02-18 16:56:39 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/speeds/new" for 119.104.63.236 at 2016-02-18 16:57:20 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpeedsController#new as HTML
+  Rendered speeds/_form.html.erb (4.2ms)
+  Rendered speeds/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.self-cf66c9ad7233436177a052d181f70339c8c11e1594ea43591541ca39d33a2a2d.css?body=1" for 119.104.63.236 at 2016-02-18 16:57:21 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/speeds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 119.104.63.236 at 2016-02-18 16:57:21 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/traffics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 119.104.63.236 at 2016-02-18 16:57:21 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-0c6c217473ed6f688f189b48b0247f5d7d3874d3fdad403fda61f6595943d745.css?body=1" for 119.104.63.236 at 2016-02-18 16:57:21 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 119.104.63.236 at 2016-02-18 16:57:21 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 119.104.63.236 at 2016-02-18 16:57:21 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 119.104.63.236 at 2016-02-18 16:57:21 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/css3-progress-bar.self-794586258b60d21a08f63b5d28b4f1c5b227f1d7ab836602a7cddef778355b95.css?body=1" for 119.104.63.236 at 2016-02-18 16:57:21 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/speeds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 119.104.63.236 at 2016-02-18 16:57:21 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/traffics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 119.104.63.236 at 2016-02-18 16:57:21 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 119.104.63.236 at 2016-02-18 16:57:21 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/speeds/new" for 119.104.63.236 at 2016-02-18 16:58:42 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpeedsController#new as HTML
+  Rendered speeds/_form.html.erb (4.3ms)
+  Rendered speeds/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 17ms (Views: 16.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.self-cf66c9ad7233436177a052d181f70339c8c11e1594ea43591541ca39d33a2a2d.css?body=1" for 119.104.63.236 at 2016-02-18 16:58:42 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/speeds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 119.104.63.236 at 2016-02-18 16:58:42 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/traffics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 119.104.63.236 at 2016-02-18 16:58:43 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/css3-progress-bar.self-794586258b60d21a08f63b5d28b4f1c5b227f1d7ab836602a7cddef778355b95.css?body=1" for 119.104.63.236 at 2016-02-18 16:58:43 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-0c6c217473ed6f688f189b48b0247f5d7d3874d3fdad403fda61f6595943d745.css?body=1" for 119.104.63.236 at 2016-02-18 16:58:43 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 119.104.63.236 at 2016-02-18 16:58:43 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 119.104.63.236 at 2016-02-18 16:58:43 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 119.104.63.236 at 2016-02-18 16:58:43 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/speeds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 119.104.63.236 at 2016-02-18 16:58:43 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/traffics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 119.104.63.236 at 2016-02-18 16:58:43 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 119.104.63.236 at 2016-02-18 16:58:43 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/speeds/new" for 119.104.63.236 at 2016-02-18 16:59:09 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpeedsController#new as HTML
+  Rendered speeds/_form.html.erb (4.7ms)
+  Rendered speeds/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 22ms (Views: 21.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/traffics.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 119.104.63.236 at 2016-02-18 16:59:09 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-cf66c9ad7233436177a052d181f70339c8c11e1594ea43591541ca39d33a2a2d.css?body=1" for 119.104.63.236 at 2016-02-18 16:59:09 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/speeds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 119.104.63.236 at 2016-02-18 16:59:09 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-0c6c217473ed6f688f189b48b0247f5d7d3874d3fdad403fda61f6595943d745.css?body=1" for 119.104.63.236 at 2016-02-18 16:59:09 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/css3-progress-bar.self-794586258b60d21a08f63b5d28b4f1c5b227f1d7ab836602a7cddef778355b95.css?body=1" for 119.104.63.236 at 2016-02-18 16:59:09 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 119.104.63.236 at 2016-02-18 16:59:09 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 119.104.63.236 at 2016-02-18 16:59:09 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 119.104.63.236 at 2016-02-18 16:59:09 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/speeds.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 119.104.63.236 at 2016-02-18 16:59:10 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/traffics.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 119.104.63.236 at 2016-02-18 16:59:10 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 119.104.63.236 at 2016-02-18 16:59:10 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/speeds" for 119.104.63.236 at 2016-02-18 17:13:36 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpeedsController#index as HTML
+  [1m[35mSpeed Load (0.3ms)[0m  SELECT "speeds".* FROM "speeds"
+  Rendered speeds/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 21ms (Views: 18.7ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/speeds/3" for 119.104.63.236 at 2016-02-18 17:13:47 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpeedsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Llj+jIGsT2W2quLs7qtptqP0dlWCYBo2zhhv6JvQmlaEiJhXEf+e1djCFPTQ+ZeyyYOmpafpAR6l+7nYAZjUZg==", "id"=>"3"}
+  [1m[36mSpeed Load (0.2ms)[0m  [1mSELECT  "speeds".* FROM "speeds" WHERE "speeds"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "speeds" WHERE "speeds"."id" = ?[0m  [["id", 3]]
+  [1m[35m (16.0ms)[0m  commit transaction
+Redirected to http://rails.momox.net:3000/speeds
+Completed 302 Found in 25ms (ActiveRecord: 16.6ms)
+
+
+Started GET "/speeds" for 119.104.63.236 at 2016-02-18 17:13:48 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpeedsController#index as HTML
+  [1m[36mSpeed Load (0.2ms)[0m  [1mSELECT "speeds".* FROM "speeds"[0m
+  Rendered speeds/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 17ms (Views: 16.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/speeds/new" for 119.104.63.236 at 2016-02-18 17:13:50 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpeedsController#new as HTML
+  Rendered speeds/_form.html.erb (5.0ms)
+  Rendered speeds/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 19ms (Views: 18.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/speeds" for 119.104.63.236 at 2016-02-18 17:13:56 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpeedsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YYutOoG4kjGxpTFDkzw73YjpxhgR5jbwGs+mvGu+TOTLW8vhEetDgd/Nx1utbsXZ4p4W6DRvLdhxLHCM8fYC1A==", "speed"=>{"date(1i)"=>"2016", "date(2i)"=>"2", "date(3i)"=>"18", "time(1i)"=>"2016", "time(2i)"=>"2", "time(3i)"=>"18", "time(4i)"=>"17", "time(5i)"=>"13", "down"=>"", "up"=>""}, "speed_txt"=>"10.19 Mb/s3.79 Mb/s", "commit"=>"Create Speed"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "speeds" ("date", "time", "down", "up", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["date", "2016-02-18"], ["time", "2016-02-18 17:13:00.000000"], ["down", 10.19], ["up", 3.79], ["created_at", "2016-02-18 08:13:56.874244"], ["updated_at", "2016-02-18 08:13:56.874244"]]
+  [1m[35m (3.9ms)[0m  commit transaction
+Redirected to http://rails.momox.net:3000/speeds/4
+Completed 302 Found in 7ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/speeds/4" for 119.104.63.236 at 2016-02-18 17:13:57 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpeedsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSpeed Load (0.1ms)[0m  [1mSELECT  "speeds".* FROM "speeds" WHERE "speeds"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered speeds/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 19ms (Views: 18.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/speeds" for 119.104.63.236 at 2016-02-18 17:14:00 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpeedsController#index as HTML
+  [1m[35mSpeed Load (0.1ms)[0m  SELECT "speeds".* FROM "speeds"
+  Rendered speeds/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/speeds/new" for 119.104.63.236 at 2016-02-18 17:15:17 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpeedsController#new as HTML
+  Rendered speeds/_form.html.erb (5.9ms)
+  Rendered speeds/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/speeds" for 119.104.63.236 at 2016-02-18 17:17:11 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpeedsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b3Tuv9vaEbGskSS63oZbYDDNs9r510JaGHp0F68OdtrFpIhkS4nAAcL50qLg1KVkWrpjKtxeWXJzmaInNUY46g==", "speed"=>{"date(1i)"=>"2016", "date(2i)"=>"2", "date(3i)"=>"18", "time(1i)"=>"2016", "time(2i)"=>"2", "time(3i)"=>"18", "time(4i)"=>"17", "time(5i)"=>"15"}, "speed_txt"=>"8.63 Mb/s\t3.07 Mb/s", "commit"=>"Create Speed"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "speeds" ("date", "time", "down", "up", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["date", "2016-02-18"], ["time", "2016-02-18 17:15:00.000000"], ["down", 8.63], ["up", 3.07], ["created_at", "2016-02-18 08:17:11.062373"], ["updated_at", "2016-02-18 08:17:11.062373"]]
+  [1m[36m (4.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://rails.momox.net:3000/speeds/5
+Completed 302 Found in 7ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/speeds/5" for 119.104.63.236 at 2016-02-18 17:17:11 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpeedsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mSpeed Load (0.1ms)[0m  SELECT  "speeds".* FROM "speeds" WHERE "speeds"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered speeds/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/speeds" for 119.104.63.236 at 2016-02-18 17:17:14 +0900
+Cannot render console from 119.104.63.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpeedsController#index as HTML
+  [1m[36mSpeed Load (0.1ms)[0m  [1mSELECT "speeds".* FROM "speeds"[0m
+  Rendered speeds/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.1ms)

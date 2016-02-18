@@ -24,7 +24,14 @@ class SpeedsController < ApplicationController
   # POST /speeds
   # POST /speeds.json
   def create
+    speed_txt = params[:speed_txt]
+    
+    down = speed_txt.match(/(\d+\.\d+).*(\d+\.\d+)/)[1]
+    up   = speed_txt.match(/(\d+\.\d+).*(\d+\.\d+)/)[2]
+
     @speed = Speed.new(speed_params)
+    @speed.down = down
+    @speed.up   = up
 
     respond_to do |format|
       if @speed.save
