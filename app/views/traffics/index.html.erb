@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Traffics</h1>
+
+<table class="data">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>R</th>
+      <th></th>
+      <th>S</th>
+      <th></th>
+      <th>Total</th>
+      <th></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @traffics.each do |traffic| %>
+      <tr>
+        <td class='date'><%= traffic.date %></td>
+        <td class='num'><%= number_with_precision traffic.r, precision:2 %>GB</td>
+        <td class='graph'> <meter value="<%=(traffic.r/20)%>" style="width:100px"></meter> </td>
+        <td class='num'><%= number_with_precision traffic.s, precision:2 %>GB</td>
+        <td class='graph'> <meter value="<%=(traffic.s/20)%>" style="width:100px"></meter> </td>
+        <td class='num'><%= number_with_precision traffic.s+traffic.r, precision:2 %>GB</td>
+        <td class='graph'> <meter value="<%=((traffic.s+traffic.r)/20)%>" style="width:100px"></meter> </td>
+        <td class="control"><%= link_to  traffic do %><span class="glyphicon glyphicon-eye-open"></span><% end %></td>
+        <td class="control"><%= link_to  edit_traffic_path(traffic) do %><span class="glyphicon glyphicon-pencil"></span><% end %></td>
+        <td class="control"><%= link_to  traffic, method: :delete, data: { confirm: 'Are you sure?' } do %><span class="glyphicon glyphicon-trash"></span><% end %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Traffic', new_traffic_path %>

@@ -1,0 +1,29 @@
+<%= form_for(@traffic) do |f| %>
+  <% if @traffic.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@traffic.errors.count, "error") %> prohibited this traffic from being saved:</h2>
+
+      <ul>
+      <% @traffic.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.text_field :date %>
+  </div>
+  <div class="field">
+    <%= f.label :r %><br>
+    <%= f.number_field :r %>
+  </div>
+  <div class="field">
+    <%= f.label :s %><br>
+    <%= f.number_field :s %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @traffic.date %>
+</p>
+
+<p>
+  <strong>R:</strong>
+  <%= @traffic.r %>
+</p>
+
+<p>
+  <strong>S:</strong>
+  <%= @traffic.s %>
+</p>
+
+<%= link_to 'Edit', edit_traffic_path(@traffic) %> |
+<%= link_to 'Back', traffics_path %>
