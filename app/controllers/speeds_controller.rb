@@ -35,8 +35,8 @@ class SpeedsController < ApplicationController
 
     respond_to do |format|
       if @speed.save
-        format.html { redirect_to @speed, notice: 'Speed was successfully created.' }
-        format.json { render :show, status: :created, location: @speed }
+        @speeds = Speed.all 
+        format.html { render "index", notice: 'Speed was successfully created.' }
       else
         format.html { render :new }
         format.json { render json: @speed.errors, status: :unprocessable_entity }
