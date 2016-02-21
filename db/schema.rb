@@ -16,19 +16,19 @@ ActiveRecord::Schema.define(version: 20160219231455) do
   create_table "speeds", force: :cascade do |t|
     t.date     "date"
     t.time     "time"
-    t.float    "down"
-    t.float    "up"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string   "rem"
+    t.float    "down",       limit: 24
+    t.float    "up",         limit: 24
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.string   "rem",        limit: 255
   end
 
   create_table "traffics", force: :cascade do |t|
-    t.string   "date"
-    t.float    "r"
-    t.float    "s"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "date",       limit: 255
+    t.float    "r",          limit: 24
+    t.float    "s",          limit: 24
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
 end
