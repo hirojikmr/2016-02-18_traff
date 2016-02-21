@@ -10,6 +10,7 @@ class TrafficsController < ApplicationController
   # GET /traffics/1
   # GET /traffics/1.json
   def show
+    
   end
 
   # GET /traffics/new

@@ -76,6 +76,6 @@ class SpeedsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def speed_params
-      params.require(:speed).permit(:date, :time, :down, :up)
+      params.require(:speed).permit(:date, :time, :down, :up, :rem)
     end
 end
