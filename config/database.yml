@@ -20,7 +20,7 @@ default: &default
   username: traff
   password: 0855
   socket: 3306
-  host: mysql.momox.net
+  host: localhost
 
 development:
   <<: *default

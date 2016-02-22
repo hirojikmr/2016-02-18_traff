@@ -1,4 +1,7 @@
-*.cache
 *.log
+*.cache
+*.swp
+*.out
+*.csv
+*.sql
 *.pid
-nohup.out
